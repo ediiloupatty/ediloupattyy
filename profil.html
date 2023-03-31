@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1E3A8A, #CA3435, #1E3A8A);
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 80%;
+            margin: 0 auto;
+            opacity: 0;
+        }
+
+        .profile-img {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: #fff;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		margin-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.profile-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		transition: transform 0.5s ease;
+	}
+
+	.profile-img:hover img {
+		transform: scale(1.2);
+	}
+
+	.profile-info {
+		background-image: url('URL_GAMBAR_BATIK');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: white;
+		padding: 30px;
+		border-radius: 10px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.5s ease;
+		text-align: center;
+	}
+
+	.profile-info:hover {
+		transform: scale(1.05);
+	}
+
+	h1 {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+
+	.info {
+		margin-bottom: 10px;
+	}
+
+	.loader {
+		display: none;
+		border: 5px solid #f3f3f3;
+		border-top: 5px solid #3498db;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		animation: spin 1s linear infinite;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@keyframes spin {
+		0% { transform: translate(-50%, -50%) rotate(0deg); }
+		100% { transform: translate(-50%, -50%) rotate(360deg); }
+	}
+
+        @media screen and (max-width: 768px) {
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-info {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* ... */
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader"></div>
+	<div class="container" id="container">
+		<div class="profile-img">
+			<img src="Profil.JPG" alt="Profile Image">
+		</div>
+		<div class="profile-info">
+			<h1>edi loupatty</h1>
+			<p class="info">Information Technology</p>
+			<p class="info">State Polytechnic of Manado</p>
+			<p class="info">Kalimantan-Manado</p>
+		</div>
+	</div>
+    <script>
+        document.onreadystatechange = function () {
+            const loader = document.getElementById('loader');
+            const container = document.getElementById('container');
+if (document.readyState === "complete") {
+setTimeout(function() {
+loader.style.display = 'none';
+container.style.opacity = 1;
+}, 1000);
+} else {
+loader.style.display = 'block';
+container.style.opacity = 0;
+}
+};
+</script>
+</body>
+</html>

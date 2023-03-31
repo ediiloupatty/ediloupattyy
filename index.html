@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>edi loupatty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tambahkan viewport meta tag -->
+	<style>
+		body {
+			background: linear-gradient(to bottom, #1E3A8A, #CA3435, #1E3A8A);
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			width: 90%;
+			margin: 0 auto;
+			font-family: sans-serif;
+		}
+
+		.profile-img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			margin-bottom: 30px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.profile-img img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transition: transform 0.5s ease;
+		}
+
+		.profile-img:hover img {
+			transform: scale(1.2);
+		}
+
+		.profile-links {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		.profile-links a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			background: #fff;
+			border-radius: 50%;
+			margin: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			transition: transform 0.5s ease;
+		}
+
+		.profile-links a:hover {
+			transform: scale(1.2);
+		}
+
+		.profile-links a img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		.music-player {
+			margin-top: 20px;
+		}
+
+		.music-title {
+			margin-bottom: 5px;
+			color: #fff;
+			text-align: center;
+		}
+
+		/* Tambahkan media query untuk perangkat mobile */
+		@media (max-width: 768px) {
+			.profile-img {
+				width: 100px;
+				height: 100px;
+			}
+
+			.profile-links a {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="profile-img">
+			<img src="Profil.JPG" alt="Profile Image" id="profileImage" onclick="redirectToProfile()">
+		</div>
+		<div class="profile-links">
+            <a href="https://web.facebook.com/Vvnnxx">
+                <img src="facebook.png" alt="Facebook">
+             </a>
+             <a href="https://github.com/ediiloupatty">
+                <img src="github.png" alt="github">
+                </a>
+                <a href="https://www.youtube.com/@ediloupatty">
+                <img src="youtube.png" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com/ediloupatty">
+                <img src="instagram.png" alt="instagram">
+                </a>
+                </div>
+                <div class="music-player">
+                <p class="music-title">One Call Away</p>
+                <audio controls>
+                <source src="One Call Away.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                </div>
+                </div>
+                <script>
+                function redirectToProfile() {
+                window.location.href = "profil.html";
+                }
+                </script>
+                
+                </body>
+                </html>
